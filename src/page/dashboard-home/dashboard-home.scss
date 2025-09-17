@@ -1,0 +1,84 @@
+.dashboard-home {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px 20px;
+  background: #f9f9f9;
+
+  &__main {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #222;
+  }
+
+  &__carousel {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+
+    img {
+      max-height: 300px;
+      object-fit: contain;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+}
+
+// Button Styles
+.btn {
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+
+  &--yellow {
+    background: #ffd700;
+    color: #222;
+
+    &:hover {
+      background: #e6c200;
+    }
+  }
+
+  &--blue {
+    background: #007bff;
+    color: #fff;
+
+    &:hover {
+      background: #0056b3;
+    }
+  }
+
+  &--green {
+    background: #28a745;
+    color: #fff;
+
+    &:hover {
+      background: #1e7e34;
+    }
+  }
+
+  &--red {
+    background: #dc3545;
+    color: #fff;
+
+    &:hover {
+      background: #a71d2a;
+    }
+  }
+}

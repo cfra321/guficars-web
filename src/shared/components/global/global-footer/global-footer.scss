@@ -1,0 +1,76 @@
+.global-footer {
+  background: #222;
+  color: #fff;
+  padding: 40px 30px 20px;
+  font-family: sans-serif;
+  border-top: 1px solid #444;
+}
+
+.global-footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.global-footer__brand,
+.global-footer__nav,
+.global-footer__contact,
+.global-footer__social {
+  flex: 1 1 200px;
+  margin-bottom: 20px;
+}
+
+.global-footer__brand {
+  flex: 1 1 250px;
+}
+.global-footer__nav {
+  flex: 1 1 150px;
+}
+.global-footer__social {
+  flex: 1 1 150px;
+}
+
+.global-footer__title {
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+.global-footer__subtitle {
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+.global-footer__desc {
+  font-size: 15px;
+  line-height: 1.6;
+}
+.global-footer__nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.global-footer__nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+.global-footer__nav-link:hover {
+  text-decoration: underline;
+}
+.global-footer__social-link {
+  color: #fff;
+  margin-right: 10px;
+  text-decoration: none;
+}
+.global-footer__social-link:last-child {
+  margin-right: 0;
+}
+.global-footer__copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #aaa;
+}
+.global-footer__contact p {
+  margin: 0;
+}
