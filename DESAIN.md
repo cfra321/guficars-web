@@ -128,7 +128,7 @@ CENTER:
 Navigation
 
 RIGHT:
-Admin Login
+Login
 
 Logo Size:
 140px

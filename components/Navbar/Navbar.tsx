@@ -12,6 +12,8 @@ export default function Navbar() {
   const headerRef = useRef<HTMLElement>(null)
 
   const activeIndex = NAV_LINKS.findIndex((l) => l.path === pathname)
+  const isHomePage = pathname === '/'
+  const needsLightText = isHomePage && !scrolled
 
   useEffect(() => {
     function onScroll() {
@@ -74,10 +76,10 @@ export default function Navbar() {
         className="navbar-scroll fixed top-0 right-0 left-0 z-50 flex items-center"
         style={{
           height: scrolled ? '72px' : '80px',
-          backgroundColor: scrolled ? 'rgba(255,255,255,0.92)' : 'rgba(255,255,255,0.3)',
+          backgroundColor: scrolled ? 'rgba(255,255,255,0.92)' : 'transparent',
           backdropFilter: scrolled ? 'blur(20px)' : 'blur(4px)',
           WebkitBackdropFilter: scrolled ? 'blur(20px)' : 'blur(4px)',
-          borderBottom: '1px solid rgba(0,0,0,0.06)',
+          borderBottom: needsLightText ? '1px solid rgba(255,255,255,0.1)' : '1px solid rgba(0,0,0,0.06)',
         }}
       >
         <nav className="mx-auto flex h-full w-full max-w-[1280px] items-center px-8">
@@ -91,7 +93,7 @@ export default function Navbar() {
                 <rect x="18" y="10" width="4" height="8" rx="1" fill="white" opacity="0.6"/>
                 <rect x="20" y="8" width="2" height="4" rx="0.5" fill="white" opacity="0.4"/>
               </svg>
-              <span className="text-xl font-bold tracking-tight text-gray-900">
+              <span className={`text-xl font-bold tracking-tight ${needsLightText ? 'text-white' : 'text-gray-900'}`}>
                 Gufi<span style={{ color: '#0EA5E9' }}>Cars</span>
               </span>
             </Link>
@@ -105,7 +107,7 @@ export default function Navbar() {
                   href={link.path}
                   className={`nav-link text-sm font-medium ${i === activeIndex ? 'active' : ''}`}
                   style={{
-                    color: i === activeIndex ? '#0EA5E9' : 'rgba(15,23,42,0.7)',
+                    color: i === activeIndex ? '#0EA5E9' : (needsLightText ? 'rgba(255,255,255,0.8)' : 'rgba(15,23,42,0.7)'),
                     fontWeight: 500,
                     fontSize: '14px',
                   }}
@@ -120,32 +122,32 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center justify-end" style={{ width: '140px' }}>
-            <button
-              className="hidden items-center gap-2 text-sm font-medium transition-all duration-300 lg:flex"
-              style={{
-                background: 'transparent',
-                color: '#0F172A',
-                border: '1px solid rgba(15,23,42,0.25)',
-                borderRadius: '999px',
-                height: '44px',
-                padding: '0 24px',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = '#0EA5E9'
-                e.currentTarget.style.borderColor = '#0EA5E9'
-                e.currentTarget.style.color = '#FFFFFF'
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'transparent'
-                e.currentTarget.style.borderColor = 'rgba(15,23,42,0.25)'
-                e.currentTarget.style.color = '#0F172A'
-              }}
+              <button
+                className="hidden items-center gap-2 text-sm font-medium transition-all duration-300 lg:flex"
+                style={{
+                  background: 'transparent',
+                  color: needsLightText ? '#FFFFFF' : '#0F172A',
+                  border: needsLightText ? '1px solid rgba(255,255,255,0.35)' : '1px solid rgba(15,23,42,0.25)',
+                  borderRadius: '999px',
+                  height: '44px',
+                  padding: '0 24px',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#0EA5E9'
+                  e.currentTarget.style.borderColor = '#0EA5E9'
+                  e.currentTarget.style.color = '#FFFFFF'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'transparent'
+                  e.currentTarget.style.borderColor = needsLightText ? 'rgba(255,255,255,0.35)' : 'rgba(15,23,42,0.25)'
+                  e.currentTarget.style.color = needsLightText ? '#FFFFFF' : '#0F172A'
+                }}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
                 <path d="M7 11V7a5 5 0 0110 0v4"/>
               </svg>
-              Admin Login
+              Login
             </button>
 
             <button
@@ -154,9 +156,9 @@ export default function Navbar() {
               aria-label="Toggle menu"
               style={{ width: 32, height: 32 }}
             >
-              <span className="hamburger-line block h-0.5 w-5 rounded-full bg-gray-800" />
-              <span className="hamburger-line block h-0.5 w-5 rounded-full bg-gray-800" />
-              <span className="hamburger-line block h-0.5 w-5 rounded-full bg-gray-800" />
+              <span className={`hamburger-line block h-0.5 w-5 rounded-full ${needsLightText ? 'bg-white' : 'bg-gray-800'}`} />
+              <span className={`hamburger-line block h-0.5 w-5 rounded-full ${needsLightText ? 'bg-white' : 'bg-gray-800'}`} />
+              <span className={`hamburger-line block h-0.5 w-5 rounded-full ${needsLightText ? 'bg-white' : 'bg-gray-800'}`} />
             </button>
           </div>
         </nav>
@@ -228,7 +230,7 @@ export default function Navbar() {
                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
                 <path d="M7 11V7a5 5 0 0110 0v4"/>
               </svg>
-              Admin Login
+              Login
             </button>
           </div>
         </div>
