@@ -28,7 +28,7 @@ export default function BenefitsSection() {
     <section
       ref={sectionRef}
       className="relative overflow-hidden"
-      style={{ height: '280px', contain: 'layout style paint' }}
+      style={{ minHeight: 'clamp(340px, 40vh, 280px)', contain: 'layout style paint' }}
     >
       {/* Subtle background pattern */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.04]">
@@ -42,7 +42,7 @@ export default function BenefitsSection() {
       </div>
 
       <div className="mx-auto flex h-full max-w-[1280px] items-center px-8">
-        <div className="grid w-full grid-cols-2 md:grid-cols-4" style={{ gap: '32px' }}>
+        <div className="grid w-full grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
           {BENEFITS.map((b) => (
             <BenefitCard key={b.title} {...b} />
           ))}

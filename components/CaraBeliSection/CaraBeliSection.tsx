@@ -1,6 +1,6 @@
 export default function CaraBeliSection() {
   return (
-    <section className="relative overflow-hidden py-40" style={{ contain: 'layout style paint' }}>
+    <section className="relative overflow-hidden py-20 sm:py-40" style={{ contain: 'layout style paint' }}>
       <div className="pointer-events-none absolute left-1/2 top-0 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-primary/[0.03] blur-[100px]" />
       <div className="pointer-events-none absolute -bottom-20 left-0 h-[300px] w-[300px] rounded-full bg-primary/[0.02] blur-[80px]" />
       <div className="mx-auto max-w-[1280px] px-8">
@@ -20,7 +20,7 @@ export default function CaraBeliSection() {
           {STEPS.map((step) => (
             <div
               key={step.number}
-              className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm"
+              className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8"
               style={{ backdropFilter: 'blur(12px)' }}
             >
               <span className="text-5xl font-bold text-primary/30">{step.number}</span>

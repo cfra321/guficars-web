@@ -17,7 +17,7 @@ export default function CTASection() {
   }, [])
 
   return (
-    <section id="cta" className="relative py-40" style={{ contain: 'layout style paint' }}>
+    <section id="cta" className="relative py-20 sm:py-40" style={{ contain: 'layout style paint' }}>
       {/* Background image */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <Image

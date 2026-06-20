@@ -43,7 +43,7 @@ export default function CaraBeliPage() {
     <>
       <Navbar />
       <main>
-        <section className="relative pt-40">
+        <section className="relative pt-24 sm:pt-40">
           <div className="mx-auto max-w-[1280px] px-8">
             <div className="mb-20 text-center">
               <p className="mb-3 text-sm font-medium tracking-wide text-primary uppercase">
@@ -60,7 +60,7 @@ export default function CaraBeliPage() {
               {STEPS.map((step) => (
                 <div
                   key={step.number}
-                  className="rounded-2xl bg-white border-gray-200 shadow-sm p-8"
+                  className="rounded-2xl bg-white border-gray-200 shadow-sm p-6 sm:p-8"
                   style={{ backdropFilter: 'blur(12px)' }}
                 >
                   <span className="text-5xl font-bold text-primary/30">{step.number}</span>

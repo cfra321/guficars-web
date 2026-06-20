@@ -32,7 +32,7 @@ export default function HeroSection() {
       ref={sectionRef}
       id="hero"
       className="relative"
-      style={{ height: '920px', contain: 'layout style paint' }}
+      style={{ height: 'clamp(600px, 100vh, 920px)', contain: 'layout style paint' }}
     >
       <div className="absolute inset-0 overflow-hidden">
         <div
@@ -57,7 +57,7 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 mx-auto h-full max-w-[1280px] px-8">
-        <div className="flex h-full flex-col pt-[180px]">
+        <div className="flex h-full flex-col pt-24 sm:pt-[180px]">
           <HeroCarousel />
           <FeatureRow />
         </div>

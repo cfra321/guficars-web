@@ -32,7 +32,7 @@ export default function StorySection() {
     >
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-transparent" />
 
-      <div className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-16 px-8 lg:grid-cols-2">
+      <div className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-8 px-6 sm:px-8 lg:grid-cols-2 lg:gap-16">
         <div data-story-image>
           <CarDisassemble />
         </div>

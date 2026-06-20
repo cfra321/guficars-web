@@ -26,7 +26,7 @@ export default function KontakPage() {
     <>
       <Navbar />
       <main>
-        <section className="relative pt-40 pb-32">
+        <section className="relative pt-24 pb-20 sm:pt-40 sm:pb-32">
           <div className="mx-auto max-w-[1280px] px-8">
             <div className="mb-16 text-center">
               <p className="mb-3 text-sm font-medium tracking-wide text-primary uppercase">
@@ -45,18 +45,18 @@ export default function KontakPage() {
                 {CONTACT_INFO.map((info) => (
                   <div
                     key={info.label}
-                    className="rounded-2xl bg-white border-gray-200 shadow-sm p-6"
+                    className="rounded-2xl bg-white border-gray-200 shadow-sm p-5 sm:p-6"
                     style={{ backdropFilter: 'blur(12px)' }}
                   >
                     <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">
                       {info.label}
                     </p>
-                    <p className="mt-1 text-lg text-gray-900">{info.value}</p>
+                    <p className="mt-1 text-sm text-gray-900 sm:text-lg">{info.value}</p>
                   </div>
                 ))}
               </div>
 
-              <div className="rounded-2xl bg-white border-gray-200 shadow-sm p-8"
+              <div className="rounded-2xl bg-white border-gray-200 shadow-sm p-6 sm:p-8"
                 style={{ backdropFilter: 'blur(12px)' }}
               >
                 <h3 className="mb-6 text-lg font-semibold text-gray-900">

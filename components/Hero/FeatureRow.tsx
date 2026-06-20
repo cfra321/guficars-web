@@ -8,8 +8,7 @@ const FEATURES = [
 export default function FeatureRow() {
   return (
     <div
-      className="mt-16 flex flex-wrap"
-      style={{ gap: '40px' }}
+      className="mt-8 flex flex-wrap justify-center gap-4 sm:mt-16 sm:gap-10"
       data-hero-features
     >
       {FEATURES.map((f) => (
