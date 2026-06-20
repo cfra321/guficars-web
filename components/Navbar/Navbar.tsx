@@ -122,33 +122,34 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center justify-end" style={{ width: '140px' }}>
-              <button
-                className="hidden items-center gap-2 text-sm font-medium transition-all duration-300 lg:flex"
-                style={{
-                  background: 'transparent',
-                  color: needsLightText ? '#FFFFFF' : '#0F172A',
-                  border: needsLightText ? '1px solid rgba(255,255,255,0.35)' : '1px solid rgba(15,23,42,0.25)',
-                  borderRadius: '999px',
-                  height: '44px',
-                  padding: '0 24px',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = '#0EA5E9'
-                  e.currentTarget.style.borderColor = '#0EA5E9'
-                  e.currentTarget.style.color = '#FFFFFF'
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'transparent'
-                  e.currentTarget.style.borderColor = needsLightText ? 'rgba(255,255,255,0.35)' : 'rgba(15,23,42,0.25)'
-                  e.currentTarget.style.color = needsLightText ? '#FFFFFF' : '#0F172A'
-                }}
+            <Link
+              href="/login"
+              className="hidden items-center gap-2 text-sm font-medium transition-all duration-300 lg:flex"
+              style={{
+                background: needsLightText ? 'rgba(255,255,255,0.15)' : 'transparent',
+                color: needsLightText ? '#FFFFFF' : '#0F172A',
+                border: needsLightText ? '1px solid rgba(255,255,255,0.35)' : '1px solid rgba(15,23,42,0.25)',
+                borderRadius: '999px',
+                height: '44px',
+                padding: '0 24px',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#0EA5E9'
+                e.currentTarget.style.borderColor = '#0EA5E9'
+                e.currentTarget.style.color = '#FFFFFF'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = needsLightText ? 'rgba(255,255,255,0.15)' : 'transparent'
+                e.currentTarget.style.borderColor = needsLightText ? 'rgba(255,255,255,0.35)' : 'rgba(15,23,42,0.25)'
+                e.currentTarget.style.color = needsLightText ? '#FFFFFF' : '#0F172A'
+              }}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
                 <path d="M7 11V7a5 5 0 0110 0v4"/>
               </svg>
               Login
-            </button>
+            </Link>
 
             <button
               className={`hamburger flex flex-col items-center justify-center gap-1.5 lg:hidden ${mobileOpen ? 'open' : ''}`}
@@ -205,15 +206,13 @@ export default function Navbar() {
             ))}
           </div>
           <div className="mt-auto border-t border-gray-200 px-6 py-6">
-            <button
-              className="flex w-full items-center justify-center gap-2 text-sm font-medium transition-all duration-300"
+            <Link
+              href="/login"
+              className="flex w-full items-center justify-center gap-2 rounded-full border px-6 py-3 text-sm font-medium transition-all duration-300"
               style={{
                 background: 'transparent',
                 color: '#0F172A',
-                border: '1px solid rgba(15,23,42,0.25)',
-                borderRadius: '999px',
-                height: '44px',
-                padding: '0 24px',
+                borderColor: 'rgba(15,23,42,0.25)',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = '#0EA5E9'
@@ -231,7 +230,7 @@ export default function Navbar() {
                 <path d="M7 11V7a5 5 0 0110 0v4"/>
               </svg>
               Login
-            </button>
+            </Link>
           </div>
         </div>
       </div>
