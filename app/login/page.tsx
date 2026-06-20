@@ -26,20 +26,20 @@ export default function LoginPage() {
     <>
       <Navbar />
       <main>
-        <section className="relative flex min-h-screen items-center justify-center pt-32 pb-24">
+        <section className="relative flex min-h-screen items-center justify-center pt-20 pb-16 sm:pt-32 sm:pb-24">
           <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.03] to-transparent" />
 
-          <div className="relative mx-auto w-full max-w-md px-8">
-            <div className="mb-8 text-center">
-              <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary shadow-lg shadow-primary/20">
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <div className="relative mx-auto w-full max-w-md px-6 sm:px-8">
+            <div className="mb-6 text-center sm:mb-8">
+              <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary shadow-lg shadow-primary/20 sm:h-14 sm:w-14">
+                <svg width="24" height="24" viewBox="0 0 28 28" fill="none" className="sm:w-7 sm:h-7">
                   <rect width="28" height="28" rx="6" fill="white"/>
                   <path d="M7 18C7 16.5 8.5 14 11 14c2.5 0 4 2.5 4 4" stroke="#0EA5E9" strokeWidth="1.5" strokeLinecap="round"/>
                   <circle cx="9.5" cy="19" r="1" fill="#0EA5E9"/>
                   <circle cx="13.5" cy="19" r="1" fill="#0EA5E9"/>
                 </svg>
               </div>
-              <h1 className="text-2xl font-bold tracking-tight text-gray-900">
+              <h1 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
                 Masuk ke akun Anda
               </h1>
               <p className="mt-2 text-sm text-gray-500">
@@ -50,7 +50,7 @@ export default function LoginPage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-gray-200/80 bg-white p-8 shadow-sm">
+            <div className="rounded-2xl border border-gray-200/80 bg-white p-6 shadow-sm sm:p-8">
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-gray-700">
