@@ -35,7 +35,7 @@ export default function WhyChooseSection() {
   }, [])
 
   return (
-    <section id="mengapa-kami" className="relative overflow-hidden py-40" style={{ contain: 'layout style paint' }}>
+    <section id="mengapa-kami" className="relative overflow-hidden py-20 sm:py-40" style={{ contain: 'layout style paint' }}>
       {/* Decorative gradient blobs */}
       <div className="pointer-events-none absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-primary/[0.03] blur-[100px]" />
       <div className="pointer-events-none absolute -right-40 bottom-0 h-[400px] w-[400px] rounded-full bg-primary/[0.02] blur-[80px]" />

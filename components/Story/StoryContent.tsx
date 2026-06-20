@@ -36,14 +36,14 @@ export default function StoryContent() {
         <span className="text-primary">Kemudahan</span>
       </h2>
 
-      <div className="space-y-8">
+      <div className="space-y-6 sm:space-y-8">
         {STEPS.map((step, i) => (
           <div
             key={step.num}
             data-story-step
-            className="group flex items-start gap-6"
+            className="group flex items-start gap-4 sm:gap-6"
           >
-            <div className="flex-1 border-l-2 border-gray-200 pl-6 transition-colors hover:border-primary">
+            <div className="flex-1 border-l-2 border-gray-200 pl-4 transition-colors hover:border-primary sm:pl-6">
               <span className="mb-2 block text-sm font-medium text-primary">
                 {step.num}
               </span>

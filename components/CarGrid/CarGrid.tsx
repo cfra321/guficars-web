@@ -149,7 +149,7 @@ export default function CarGrid({ filters, carousel }: { filters?: CarFilters; c
   }
 
   return (
-    <section id="mobil" className="relative py-40" style={{ contain: 'layout style paint' }}>
+    <section id="mobil" className="relative py-20 sm:py-40" style={{ contain: 'layout style paint' }}>
       <div className="mx-auto max-w-[1280px] px-8">
         <div className="mb-16 text-center" data-animate>
           <p className="mb-3 text-sm font-medium tracking-wide text-primary uppercase">

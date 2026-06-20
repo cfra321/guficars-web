@@ -44,7 +44,7 @@ export default function CarDisassemble() {
       {PARTS.map(({ label, x, y }) => (
         <div key={label} data-car-part className="absolute z-30 flex items-center gap-1.5" style={{ left: `${x}%`, top: `${y}%` }}>
           <span className="h-2 w-2 rounded-full bg-primary shadow-lg shadow-primary/50" />
-          <span className="text-xs font-medium text-gray-900">{label}</span>
+          <span className="text-[10px] font-medium text-gray-900 sm:text-xs">{label}</span>
         </div>
       ))}
     </div>

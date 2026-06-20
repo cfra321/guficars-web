@@ -41,8 +41,8 @@ export default function CarDetailPage({ params }: { params: Promise<{ id: string
   return (
     <>
       <Navbar />
-      <main className="pt-32">
-        <section className="py-20">
+      <main className="pt-24 sm:pt-32">
+        <section className="py-12 sm:py-20">
           <div className="mx-auto max-w-[1280px] px-8">
             <Link href="/mobil" className="mb-8 inline-flex items-center gap-2 text-sm text-gray-500 transition-colors hover:text-gray-900">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -57,12 +57,12 @@ export default function CarDetailPage({ params }: { params: Promise<{ id: string
               </div>
 
               <div>
-                <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">{car.name}</h1>
-                <p className="mt-2 text-lg text-gray-500">{car.location}</p>
-                <p className="mt-6 text-5xl font-bold text-primary">{car.price}</p>
+                <h1 className="text-2xl font-bold text-gray-900 sm:text-5xl">{car.name}</h1>
+                <p className="mt-2 text-sm text-gray-500 sm:text-lg">{car.location}</p>
+                <p className="mt-4 text-3xl font-bold text-primary sm:mt-6 sm:text-5xl">{car.price}</p>
 
                 {detail && (
-                  <div className="mt-8 grid grid-cols-2 gap-4">
+                  <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:gap-4">
                     {[
                       { label: 'Tahun', value: detail.year },
                       { label: 'Bahan Bakar', value: detail.fuel },
@@ -71,7 +71,7 @@ export default function CarDetailPage({ params }: { params: Promise<{ id: string
                       { label: 'Warna', value: detail.color },
                       { label: 'Sertifikasi', value: 'Terinspeksi' },
                     ].map((item) => (
-                      <div key={item.label} className="rounded-xl bg-white border-gray-200 shadow-sm px-5 py-4">
+                      <div key={item.label} className="rounded-xl bg-white border-gray-200 shadow-sm px-4 py-3 sm:px-5 sm:py-4">
                         <p className="text-xs text-gray-500 uppercase tracking-wide">{item.label}</p>
                         <p className="mt-1 text-base font-medium text-gray-900">{item.value}</p>
                       </div>
@@ -83,7 +83,7 @@ export default function CarDetailPage({ params }: { params: Promise<{ id: string
                   <p className="mt-8 leading-relaxed text-gray-600">{detail.desc}</p>
                 )}
 
-                <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4">
                   <button className="rounded-xl bg-primary px-10 py-4 text-base font-semibold text-white transition-all hover:bg-primary-hover shadow-xl shadow-primary/25">
                     Ajukan Pembelian
                   </button>

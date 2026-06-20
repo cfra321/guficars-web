@@ -109,18 +109,17 @@ export default function HeroCarousel() {
     >
       <div className="col-span-12 lg:col-span-5">
         <div ref={textRef} data-hero-headline>
-          <div className="w-[520px] max-w-[580px]">
+          <div className="sm:w-[520px] sm:max-w-[580px]">
             <h1
               className="font-extrabold leading-[1.1] tracking-tight"
-              style={{ fontSize: '72px', color: '#FFFFFF' }}
+              style={{ fontSize: 'clamp(32px, 6vw, 72px)', color: '#FFFFFF' }}
             >
               {SLIDES[current].title}{' '}
               <span style={{ color: '#0EA5E9' }}>{SLIDES[current].accent}</span>
             </h1>
             <p
-              className="mt-6"
+              className="mt-4 text-sm sm:mt-6 sm:text-base"
               style={{
-                fontSize: '18px',
                 lineHeight: '1.8',
                 color: 'rgba(255,255,255,0.85)',
                 maxWidth: '420px',
